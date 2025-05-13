@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="text-center py-4">
+            <h1 class="display-5 fw-bold text-white">Gemini Chatbot</h1>
+            <p class="lead text-light">Talk to our friendly AI assistant!</p>
+        </header>
+        <div class="chat-container mx-auto">
+            <div id="chat-box" class="chat-box"></div>
+            <div id="loading-indicator" class="loading-indicator d-none">
+                <img src="https://media.giphy.com/media/l0Iyl55kTeh71nTWw/giphy.gif" alt="Cartoon Robot" class="robot-gif">
+                <p class="text-light">Thinking...</p>
+            </div>
+            <div class="input-group mt-3">
+                <input type="text" id="user-input" class="form-control" placeholder="Type your message..." aria-label="User message">
+                <button id="send-btn" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
